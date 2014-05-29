@@ -1,8 +1,10 @@
-
-/*clock=SH_CP
+/*
+by JX Pan
+May 2014
+clock=SH_CP
 data=DS
-store=OE
-LATCH=ST_CP*/
+LATCH=ST_CP
+*/
 
 
 byte data;
@@ -75,4 +77,3 @@ digitalWrite(LATCHpin, HIGH);
  cmd = false;
 }
 }
-
