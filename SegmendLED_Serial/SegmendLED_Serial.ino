@@ -49,7 +49,8 @@ while(Serial.available()>0){
     dispArray = rece - 48;}
     cmd = true;
   if (rece ==68 || rece == 100){
-  dot = true; 
+  if (dot == false) {dot = true;}
+ else{dot = false;} 
 cmd = true;}
 }
 if(cmd == true){
@@ -59,7 +60,7 @@ if(cmd == true){
   
  
  if(dot == true){
-   data = digitSeg[dispArray];}
+   data = digitSeg[dispArray]+B1;}
    else{
   
   data = digitSeg[dispArray];}
@@ -77,3 +78,4 @@ digitalWrite(LATCHpin, HIGH);
  cmd = false;
 }
 }
+
